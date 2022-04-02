@@ -1,0 +1,9 @@
+<mat-card class="feed-card" [ngClass]="{'not-glued': !glueToBottom}">
+  <div class="feed-card-content hide-scrollbar" (scroll)="onScroll($event)" #feedDiv>
+    <div *ngFor="let message of messages">
+      <div class="message">
+        <app-message [message]="message"></app-message>
+      </div>
+    </div>
+  </div>
+</mat-card>

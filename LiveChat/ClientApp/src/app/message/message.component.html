@@ -1,0 +1,13 @@
+<div *ngIf="message">
+  <mat-card>
+    <div class="card-bottom">
+      <div>
+        <img class="profile-picture" [src]="message.profilePicture" />
+      </div>
+      <div class="message-panel">
+        <div class="author-name">{{ message.authorId }}</div>
+        <div class="message">{{ message.message }}</div>
+      </div>
+    </div>
+  </mat-card>
+</div>

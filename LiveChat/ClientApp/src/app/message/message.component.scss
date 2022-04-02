@@ -1,0 +1,19 @@
+.card-bottom {
+  display: flex;
+}
+
+.profile-picture {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+}
+
+.message-panel {
+  padding-left: 1rem;
+}
+
+.author-name {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}

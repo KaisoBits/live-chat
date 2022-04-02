@@ -1,0 +1,19 @@
+<mat-card class="message-input-container">
+  <mat-form-field class="message-input-input">
+    <input
+      [(ngModel)]="messageText"
+      (keyup)="keyDown($event)"
+      matInput
+      placeholder="Message"
+    />
+  </mat-form-field>
+
+  <button
+    class="message-input-button"
+    mat-raised-button
+    color="primary"
+    (click)="onSend()"
+  >
+    Send
+  </button>
+</mat-card>
