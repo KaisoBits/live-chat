@@ -1,6 +1,8 @@
 using LiveChat.Data;
 using LiveChat.Hubs;
 using Microsoft.EntityFrameworkCore;
+using AutoMapper;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +11,8 @@ builder.Services.AddSignalR();
 
 builder.Services.AddDbContext<AppDbContext>(opt => 
     opt.UseSqlite(builder.Configuration.GetConnectionString("Default")));
+
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.AddControllers();
 
