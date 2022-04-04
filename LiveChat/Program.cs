@@ -35,7 +35,6 @@ app.UseEndpoints(endpoints =>
     endpoints.MapHub<ChatHub>("/chat");
 });
 
-
 if (app.Environment.IsDevelopment())
 {
     app.UseSpa(config =>
