@@ -15,20 +15,20 @@ import { MessageReceiveModel } from 'src/models/message-receive.model';
 })
 export class MessageBoxComponent implements OnInit, AfterViewChecked {
   @Input()
-  messages: MessageReceiveModel[] = [];
+  public messages: MessageReceiveModel[] = [];
+
+  public glueToBottom = true;
 
   @ViewChild('feedDiv')
-  feedDiv!: ElementRef<HTMLElement>;
-
-  glueToBottom = true;
+  private feedDiv!: ElementRef<HTMLElement>;
 
   private lastMessageCount = 0;
 
   constructor() {}
 
-  ngOnInit(): void {}
+  public ngOnInit(): void {}
 
-  ngAfterViewChecked(): void {
+  public ngAfterViewChecked(): void {
     if (this.lastMessageCount === this.messages.length) {
       return;
     }
@@ -40,13 +40,13 @@ export class MessageBoxComponent implements OnInit, AfterViewChecked {
     }
   }
 
-  onScroll(ev: Event): void {
+  public onScroll(ev: Event): void {
     const el = ev.target as HTMLDivElement;
     const targetScroll = el.scrollHeight - el.clientHeight;
     this.glueToBottom = targetScroll - 10 < el.scrollTop;
   }
 
-  scrollToBottom() {
+  public scrollToBottom(): void {
     const el = this.feedDiv.nativeElement;
     const targetTop = el.scrollHeight - el.clientHeight;
     el.scrollTop = targetTop;

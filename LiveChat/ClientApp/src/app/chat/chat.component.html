@@ -1,4 +1,5 @@
 <div class="message-box">
   <app-message-box [messages]="messages" class="feed"></app-message-box>
-  <app-message-input class="massage-input" (sent)="onSent($event)"></app-message-input>
+  <app-message-input class="massage-input" [enabled]="connectionState === 'connected'" (sent)="onSent($event)">
+  </app-message-input>
 </div>

@@ -9,11 +9,11 @@ import { MessageReceiveModel } from 'src/models/message-receive.model';
 export class MessageComponent implements OnInit {
 
   @Input()
-  message?: MessageReceiveModel;
+  public message?: MessageReceiveModel;
 
   constructor() { }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
   }
 
 }
