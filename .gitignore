@@ -231,3 +231,7 @@ _Pvt_Extensions
 .fake/
 
 .vscode
+
+livechat.db
+livechat.db-shm
+livechat.db-wal
