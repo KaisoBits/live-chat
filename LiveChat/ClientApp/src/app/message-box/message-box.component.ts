@@ -4,20 +4,18 @@ import {
   Input,
   OnInit,
   ViewChild,
-  DoCheck,
   AfterViewChecked,
-  AfterContentChecked,
 } from '@angular/core';
-import { MessageModel } from 'src/models/message-model';
+import { MessageReceiveModel } from 'src/models/message-receive.model';
 
 @Component({
   selector: 'app-message-box',
   templateUrl: './message-box.component.html',
   styleUrls: ['./message-box.component.scss'],
 })
-export class MessageBoxComponent implements OnInit,  AfterViewChecked {
+export class MessageBoxComponent implements OnInit, AfterViewChecked {
   @Input()
-  messages: MessageModel[] = [];
+  messages: MessageReceiveModel[] = [];
 
   @ViewChild('feedDiv')
   feedDiv!: ElementRef<HTMLElement>;

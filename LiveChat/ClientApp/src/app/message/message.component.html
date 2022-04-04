@@ -2,11 +2,11 @@
   <mat-card>
     <div class="card-bottom">
       <div>
-        <img class="profile-picture" [src]="message.profilePicture" />
+        <img class="profile-picture" src="https://picsum.photos/seed/{{ message.author }}/500">
       </div>
       <div class="message-panel">
-        <div class="author-name">{{ message.authorId }}</div>
-        <div class="message">{{ message.message }}</div>
+        <div class="author-name">{{ message.author }}</div>
+          <div class="message">{{ message.content }}</div>
       </div>
     </div>
   </mat-card>

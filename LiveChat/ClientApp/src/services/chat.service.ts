@@ -3,16 +3,17 @@ import { Injectable } from '@angular/core';
 import * as signalR from '@microsoft/signalr';
 import { from, Observable, Subject } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { MessageModel } from 'src/models/message-model';
+import { MessageReceiveModel } from 'src/models/message-receive.model';
+import { MessageSendModel } from 'src/models/message-send.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ChatService {
-  public get messageStream(): Observable<MessageModel> {
+  public get messageStream(): Observable<MessageReceiveModel> {
     return this._messageStream;
   }
-  private _messageStream = new Subject<MessageModel>();
+  private _messageStream = new Subject<MessageReceiveModel>();
 
   private _hubConnection: signalR.HubConnection;
   private _initialized = false;
@@ -28,7 +29,7 @@ export class ChatService {
     if (this._initialized) return;
     this._initialized = true;
 
-    this._hubConnection.on('messagesend', (model: MessageModel) =>
+    this._hubConnection.on('messagesend', (model: MessageReceiveModel) =>
       this._messageStream.next(model)
     );
 
@@ -40,7 +41,7 @@ export class ChatService {
     }
   }
 
-  public async sendMessage(message: MessageModel) {
+  public async sendMessage(message: MessageSendModel) {
     await this._hubConnection.invoke('SendMessage', message);
   }
 }
