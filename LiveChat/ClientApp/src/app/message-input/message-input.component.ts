@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-message-input',
@@ -6,22 +6,29 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./message-input.component.scss'],
 })
 export class MessageInputComponent implements OnInit {
+  @Input()
+  public enabled = true;
+
   @Output()
   public sent = new EventEmitter<string>();
 
-  messageText: string = '';
+  public messageText: string = '';
 
   constructor() {}
 
   ngOnInit(): void {}
 
-  keyDown(event: KeyboardEvent): void {
+  public keyDown(event: KeyboardEvent): void {
     if (event.key === 'Enter') {
       this.onSend();
     }
   }
 
-  onSend(): void {
+  public onSend(): void {
+    if (!this.enabled) {
+      return;
+    }
+
     const trimmedMessage = this.messageText.trim();
     if (!trimmedMessage) {
       return;

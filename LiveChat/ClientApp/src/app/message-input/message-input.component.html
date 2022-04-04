@@ -12,6 +12,7 @@
     class="message-input-button"
     mat-raised-button
     color="primary"
+    [disabled]="!enabled"
     (click)="onSend()"
   >
     Send
