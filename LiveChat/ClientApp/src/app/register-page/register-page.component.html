@@ -12,6 +12,9 @@
               formControlName="firstName"
               placeholder="First Name"
             />
+            <mat-error>
+              {{ getError('firstName') }}
+            </mat-error>
           </mat-form-field>
           <mat-form-field class="full-width">
             <input
@@ -19,11 +22,17 @@
               formControlName="lastName"
               placeholder="Last Name"
             />
+            <mat-error>
+              {{ getError('lastName') }}
+            </mat-error>
           </mat-form-field>
         </div>
         <div class="form-row">
           <mat-form-field class="full-width">
             <input matInput formControlName="email" placeholder="Email" />
+            <mat-error>
+              {{ getError('email') }}
+            </mat-error>
           </mat-form-field>
         </div>
         <div class="form-row">
@@ -34,6 +43,9 @@
               formControlName="password"
               placeholder="Password"
             />
+            <mat-error>
+              {{ getError('password') }}
+            </mat-error>
           </mat-form-field>
           <mat-form-field class="full-width">
             <input
@@ -42,10 +54,17 @@
               formControlName="repeatPassword"
               placeholder="RepeatPassword"
             />
+            <mat-error>
+              {{ getError('repeatPassword') }}
+            </mat-error>
           </mat-form-field>
         </div>
       </div>
     </mat-card-content>
+
+    <div>
+        <mat-error> {{ getError() }} &nbsp;</mat-error>
+    </div>
 
     <mat-card-actions [align]="'end'">
       <button mat-button type="submit" role="submit" [disabled]="registering">

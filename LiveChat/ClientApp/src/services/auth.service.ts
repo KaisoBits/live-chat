@@ -12,6 +12,6 @@ export class AuthService {
   constructor(private _http: HttpClient) {}
 
   public registerUser(user: UserRegistrationModel): Observable<UserRegistrationResponseModel> {
-    return this._http.post<UserRegistrationResponseModel>(`${environment.webApi}/api/auth/register`, user);
+    return this._http.post<UserRegistrationResponseModel>(`${environment.webApi}/auth/register`, user);
   }
 }

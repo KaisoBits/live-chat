@@ -37,7 +37,7 @@ app.UseRouting();
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllers();
-    endpoints.MapHub<ChatHub>("/chat");
+    endpoints.MapHub<ChatHub>("/api/chat");
 });
 
 if (app.Environment.IsDevelopment())
