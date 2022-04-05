@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ChatComponent } from './chat/chat.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
+import { MatStepperModule } from '@angular/material/stepper';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
@@ -14,7 +15,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MessageInputComponent } from './message-input/message-input.component';
 import { MessageBoxComponent } from './message-box/message-box.component';
 import { MessageComponent } from './message/message.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { RegisterPageComponent } from './register-page/register-page.component';
 
@@ -31,6 +32,7 @@ import { RegisterPageComponent } from './register-page/register-page.component';
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSliderModule,
@@ -38,7 +40,8 @@ import { RegisterPageComponent } from './register-page/register-page.component';
     MatButtonModule,
     MatCardModule,
     HttpClientModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatStepperModule
   ],
   providers: [],
   bootstrap: [AppComponent]

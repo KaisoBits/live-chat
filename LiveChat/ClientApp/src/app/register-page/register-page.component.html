@@ -1,1 +1,57 @@
-<p>register-page works!</p>
+<mat-card>
+  <form [formGroup]="form" (ngSubmit)="formSubmit()">
+    <mat-card-title>Register</mat-card-title>
+    <mat-card-subtitle>Register new user</mat-card-subtitle>
+
+    <mat-card-content class="center-content">
+      <div>
+        <div class="form-row">
+          <mat-form-field class="full-width">
+            <input
+              matInput
+              formControlName="firstName"
+              placeholder="First Name"
+            />
+          </mat-form-field>
+          <mat-form-field class="full-width">
+            <input
+              matInput
+              formControlName="lastName"
+              placeholder="Last Name"
+            />
+          </mat-form-field>
+        </div>
+        <div class="form-row">
+          <mat-form-field class="full-width">
+            <input matInput formControlName="email" placeholder="Email" />
+          </mat-form-field>
+        </div>
+        <div class="form-row">
+          <mat-form-field class="full-width">
+            <input
+              matInput
+              type="password"
+              formControlName="password"
+              placeholder="Password"
+            />
+          </mat-form-field>
+          <mat-form-field class="full-width">
+            <input
+              matInput
+              type="password"
+              formControlName="repeatPassword"
+              placeholder="RepeatPassword"
+            />
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+
+    <mat-card-actions [align]="'end'">
+      <button mat-button type="submit" role="submit" [disabled]="registering">
+        Register
+      </button>
+      <button mat-button type="button" (click)="formClear()">Clear</button>
+    </mat-card-actions>
+  </form>
+</mat-card>

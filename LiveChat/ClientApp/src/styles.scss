@@ -4,14 +4,17 @@
 *::before {
   box-sizing: border-box;
 }
+
 html,
 body {
   height: 100%;
 }
+
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   background: rgb(42, 117, 230);
+  overflow: hidden;
 }
 
 /* Chrome, Safari and Opera */
@@ -26,4 +29,24 @@ body {
 
 mat-card {
   margin: 5px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.form-row {
+  display: flex;
+  gap: 1em;
+}
+
+.full-height-outlet + * {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
