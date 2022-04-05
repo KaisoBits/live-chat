@@ -15,6 +15,8 @@ import { MessageInputComponent } from './message-input/message-input.component';
 import { MessageBoxComponent } from './message-box/message-box.component';
 import { MessageComponent } from './message/message.component';
 import { FormsModule } from '@angular/forms';
+import { LoginPageComponent } from './login-page/login-page.component';
+import { RegisterPageComponent } from './register-page/register-page.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { FormsModule } from '@angular/forms';
     ChatComponent,
     MessageInputComponent,
     MessageBoxComponent,
-    MessageComponent
+    MessageComponent,
+    LoginPageComponent,
+    RegisterPageComponent
   ],
   imports: [
     BrowserModule,
