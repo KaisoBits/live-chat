@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ChatService } from 'src/services/chat.service';
+import { ChatService } from './services/chat.service';
 declare var particlesJS: any;
 
 @Component({

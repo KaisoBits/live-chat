@@ -3,8 +3,8 @@ import { Injectable } from '@angular/core';
 import * as signalR from '@microsoft/signalr';
 import { BehaviorSubject, from, Observable, Subject } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { MessageReceiveModel } from 'src/models/message-receive.model';
-import { MessageSendModel } from 'src/models/message-send.model';
+import { MessageReceiveModel } from '../models/message-receive.model';
+import { MessageSendModel } from '../models/message-send.model';
 
 export type ConnectionState = 'connected' | 'disconnected' | 'reconnecting';
 

@@ -6,7 +6,7 @@ import {
   ViewChild,
   AfterViewChecked,
 } from '@angular/core';
-import { MessageReceiveModel } from 'src/models/message-receive.model';
+import { MessageReceiveModel } from '../../models/message-receive.model';
 
 @Component({
   selector: 'app-message-box',

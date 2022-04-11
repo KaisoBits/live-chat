@@ -9,9 +9,9 @@ import {
 } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
-import { UserRegistrationResponseModel } from 'src/models/user-registration-response.model';
-import { UserRegistrationModel } from 'src/models/user-registration.model';
-import { AuthService } from 'src/services/auth.service';
+import { UserRegistrationResponseModel } from '../../models/user-registration-response.model';
+import { UserRegistrationModel } from '../../models/user-registration.model';
+import { AuthService } from '../../services/auth.service';
 
 interface RegisterFormModel {
   firstName: string;

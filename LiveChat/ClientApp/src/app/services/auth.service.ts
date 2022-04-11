@@ -2,8 +2,8 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { environment } from "src/environments/environment";
-import { UserRegistrationResponseModel } from "src/models/user-registration-response.model";
-import { UserRegistrationModel } from "src/models/user-registration.model";
+import { UserRegistrationResponseModel } from "../models/user-registration-response.model";
+import { UserRegistrationModel } from "../models/user-registration.model";
 
 @Injectable({
   providedIn: 'root',

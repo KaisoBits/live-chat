@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
-import { MessageReceiveModel } from 'src/models/message-receive.model';
-import { MessageSendModel } from 'src/models/message-send.model';
-import { ChatService, ConnectionState } from 'src/services/chat.service';
+import { MessageReceiveModel } from '../../models/message-receive.model';
+import { MessageSendModel } from '../../models/message-send.model';
+import { ChatService, ConnectionState } from '../../services/chat.service';
 
 @UntilDestroy()
 @Component({
