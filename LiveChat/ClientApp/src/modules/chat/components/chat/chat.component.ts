@@ -29,6 +29,8 @@ export class ChatComponent implements OnInit {
   ) {}
 
   public ngOnInit(): void {
+    this.chatService.init();
+
     this.chatService.messageStream
       .pipe(untilDestroyed(this))
       .subscribe((m) => this.messages.push(m));

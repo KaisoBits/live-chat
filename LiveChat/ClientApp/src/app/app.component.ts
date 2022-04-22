@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ChatService } from './services/chat.service';
+import { ChatService } from 'src/modules/chat/services/chat.service';
 declare var particlesJS: any;
 
 @Component({
@@ -10,10 +10,9 @@ declare var particlesJS: any;
 export class AppComponent implements OnInit {
   title = 'LiveChat';
 
-  constructor(private _chatService: ChatService) {}
+  constructor() {}
 
   async ngOnInit(): Promise<void> {
     particlesJS.load('particles-js', '/assets/particles.json', null);
-    await this._chatService.init();
   }
 }
